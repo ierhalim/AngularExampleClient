@@ -1,0 +1,45 @@
+﻿<div class="col-md-12">
+    <div class="pull-right">
+        <a href="#/" class="btn btn-info">Geri dön</a>
+    </div>
+    <div class="clearfix"></div>
+
+    <form role="form" name="frmProduct" ng-controller="productController as prod" novalidate="novalidate" ng-submit="frmProduct.$valid && prod.Submit()">
+        <div class="form-group">
+            <div class="col-md-6">
+                <label>Ürün Adi</label>
+                <input type="text" ng-model="prod.product.Name" class="form-control" required />
+                <!--inputumun ng-model directive'ine parametre olarak productControllerımın içindeki product nesnesinin Name propertysini verdim-->
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label>Marka</label>
+                <input type="text" ng-model="prod.product.Brand" class="form-control" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label>Fiyat</label>
+                <input type="number" ng-model="prod.product.Price" class="form-control" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label>Açıklama</label>
+                <textarea ng-model="prod.product.Description" class="form-control" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-6">
+                <label></label>
+                <input type="submit" class="btn btn-info" value="Kaydet" />
+            </div>
+        </div>
+        <br /><br />
+
+    </form>
+
+
+</div>

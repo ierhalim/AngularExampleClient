@@ -1,0 +1,6 @@
+E:\Projects\AngularClient\AngularClient\bin\AngularClient.dll.config
+E:\Projects\AngularClient\AngularClient\bin\AngularClient.dll
+E:\Projects\AngularClient\AngularClient\bin\AngularClient.pdb
+E:\Projects\AngularClient\AngularClient\obj\Debug\AngularClient.csprojResolveAssemblyReference.cache
+E:\Projects\AngularClient\AngularClient\obj\Debug\AngularClient.dll
+E:\Projects\AngularClient\AngularClient\obj\Debug\AngularClient.pdb

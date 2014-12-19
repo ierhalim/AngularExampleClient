@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html ng-app="helloAngular">
+<!--Configration dosyasında oluşturduğumuz application'ın scope'larını belirliyoruz.-->
+<head>
+    <title>Angular Example</title>
+    <link href="content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="content/css/Animate.css" rel="stylesheet" />
+    <style>
+           form .ng-invalid.ng-dirty {
+                border-color: red !important;
+            }
+
+           form .ng-valid.ng-dirty {
+                border-color: green !important;
+            }
+
+           .order{
+               cursor:pointer;
+           }
+            /*
+            Angularjs hiç focus almayan inputlara ng-pristine classını ekler focus aldıktan sonra ng-dirty class'ını ekler.
+            valid olmayanlara ise ng-invalid classını ekler bizde css kullanarak ng-invalid.ng-dirty classlarının çerçeve rengini kırmızı yaptık.
+        */
+    </style>
+</head>
+
+<body>
+  
+    <ba-header></ba-header>
+    <!--baHeader isimli bir directive oluşturduk ve o directive'i   artık html'elementiymiş gibi kullanabiliyoruz.
+        Dikkat etmemiz gereken bu directiveleri self close olarak kullanmamak bazı browserlarda sıkıntı çıkarabiliyor.-->
+    <div class="container">
+        <div class="row page" ng-view >
+          
+            <!--Routing kısmında render edilen html'ler ng-view directive'ine yerleşecek.-->
+        </div>
+
+    </div>
+
+
+    <script src="scripts/Angular/angular.min.js"></script>
+    <script src="scripts/Angular/angular-animate.min.js"></script>
+    <script src="scripts/Angular/angular-route.min.js"></script>
+    <script src="scripts/Angular/Configration.js"></script>
+    <!--Services-->
+    <script src="scripts/Angular/services/productService.js"></script>
+    <!--End Of Services-->
+    <!--Controller-->
+    <script src="scripts/Angular/controllers/productController.js"></script>
+    <!--End of Controller-->
+    <!--Directives-->
+    <script src="scripts/Angular/directives/staticDirectives.js"></script>
+    <!--End of Directives-->
+</body>
+
+</html>

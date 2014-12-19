@@ -1,0 +1,33 @@
+﻿
+
+<div class="col-md-12" ng-controller="procductListController as prod">
+    <!--
+        controllerımızı tanımlayıp içeride kullanmak adına allians veriyoruz
+
+        -->
+    <div class="pull-right"><a class="btn btn-success" ng-href="#/insert">Ürün ekle</a></div>
+    <div class="clearfix"></div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="order" ng-click="prod.SetOrder('Name')">Urun Adi</th>
+                <th class="order" ng-click="prod.SetOrder('Brand')">Marka</th>
+                <th class="order" ng-click="prod.SetOrder('Price')">Fiyat</th>
+                <th><input  type="search" ng-model="productFilter" placeholder="Ara" class="form-control"/></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in prod.productList |filter:productFilter |orderBy:prod.orderType" class="slide">
+                <!-- ng-repeat directive'ini kullanarak controllerımızdaki productList arrayinde dönüyoruz-->
+                <td>{{item.Name}}</td>
+                <td>{{item.Brand}}</td>
+                <td>{{item.Price}}</td>
+                <td class="text-center">
+
+                    &nbsp;
+                    <a class="btn btn-sm btn-info" ng-href="#/edit/{{item.Id}}">Düzenle</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
